@@ -1,6 +1,15 @@
 import Script from "next/script";
+import TagManager from "react-gtm-module";
+import { useEffect } from "react";
+
+//GTM-W5SLPK3
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    TagManager.initialize({
+      gtmId: "GTM-W5SLPK3",
+    });
+  }, []);
   return (
     <>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-WZD247MMFQ" />
