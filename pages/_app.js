@@ -9,11 +9,9 @@ const tagManagerArgs = {
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     TagManager.initialize(tagManagerArgs);
-    TagManager.dataLayer({
-      dataLayer: {
-        event: "pageview",
-        page: window.location.pathname,
-      },
+    dataLayer.push({
+      event: "pageview",
+      page: window.location.pathname,
     });
   }, []);
   return <Component {...pageProps} />;
